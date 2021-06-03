@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Center(
           child: Text(
-            'Band Names',
+            'Votación',
             style: TextStyle(color: Colors.black87),
           ),
         ),
@@ -135,14 +135,14 @@ class _HomePageState extends State<HomePage> {
         context: context,
         builder: (context) {
           return AlertDialog(
-            title: Text('New band name'),
+            title: Text('Agregar nuevo político:'),
             content: TextField(
               controller: textController,
             ),
             actions: <Widget>[
               MaterialButton(
                 color: Colors.amber,
-                child: Text('add'),
+                child: Text('Añadir'),
                 onPressed: () => addBandToList(textController.text),
                 elevation: 5,
               )
@@ -155,14 +155,14 @@ class _HomePageState extends State<HomePage> {
     showCupertinoDialog(
         context: context,
         builder: (_) => CupertinoAlertDialog(
-              title: Text('New band name:'),
+              title: Text('Agregar nuevo político:'),
               content: CupertinoTextField(
                 controller: textController,
               ),
               actions: <Widget>[
                 CupertinoDialogAction(
                   isDefaultAction: true,
-                  child: Text('add'),
+                  child: Text('Añadir'),
                   onPressed: () => addBandToList(textController.text),
                 ),
                 CupertinoDialogAction(
